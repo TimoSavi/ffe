@@ -1,13 +1,12 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ(2.61)
-AC_INIT([ffe], [0.3.9a], [tjsa@iki.fi])
+AC_INIT([ffe],[0.3.9b],[tjsa@iki.fi])
 AC_CONFIG_SRCDIR([src/ffe.c])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_AUX_DIR([config])
-AC_GNU_SOURCE
-AM_INIT_AUTOMAKE
+AC_USE_SYSTEM_EXTENSIONS
+AM_INIT_AUTOMAKE([tar-pax])
 
 AC_SUBST([VERSION])
 ISODATE=`date +%Y-%m-%d`
@@ -32,8 +31,8 @@ if test "x$cross_compiling" = xno; then
 fi
 
 
-# Checks for header files.
-AC_HEADER_STDC
+AC_PROG_EGREP
+
 AC_CHECK_HEADERS([fcntl.h features.h error.h errno.h getopt.h regex.h signal.h gcrypt.h printf.h])
 
 # Checks for typedefs, structures, and compiler characteristics.

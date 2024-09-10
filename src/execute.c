@@ -2484,7 +2484,7 @@ full_scan_expression(struct expression *e,char *value,int casecmp)
     return 0;
 } 
 
-/* returns true if and = 0 and attleast one expression is true 
+/* returns true if and = 0 and at least one expression is true 
  * or and = 1 and all expressions are true
  */
 int
@@ -2541,6 +2541,7 @@ eval_expression(struct structure *s,struct record *r, int and,int invert, int ca
                     while(len >= e->exp_min_len && prev_retval == retval)
                     {
                         retval += hash_scan_expression_len(e->expr_hash,write_buffer,casecmp,len);
+                        if(len == 0) break;
                         len--;
                     }
                     break;

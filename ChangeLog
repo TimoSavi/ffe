@@ -1,3 +1,9 @@
+2024-09-10 Timo Savinen <tjsa@iki.fi>
+
+    * version 0.3.9b
+    * eval_expression: Fix case where expression (given by -e) does not match anything, caused infinite loop
+    * configure.ac: Removed obsolete macros
+
 2020-12-06 Timo Savinen <tjsa@iki.fi>
 
     * version 0.3.9a
