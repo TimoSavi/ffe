@@ -332,6 +332,7 @@ struct input_file {
 #define OP_START '^'
 #define OP_EQUAL '='
 #define OP_CONTAINS '~'
+#define OP_NOT_CONTAINS '#'
 #define OP_NOT_EQUAL '!'
 #define OP_REQEXP '?'
 

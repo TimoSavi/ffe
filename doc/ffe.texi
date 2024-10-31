@@ -286,6 +286,9 @@ Field @var{field} starts with @var{value}.
 @item field@strong{~}value
 Field @var{field} contains @var{value}.
 
+@item field@strong{#}value
+Field @var{field} does not contain @var{value}.
+
 @item field@strong{!}value
 Field @var{field} is not equal to @var{value}.
 

@@ -801,12 +801,15 @@ add_expression(char *optarg)
     } else if((op_pos = strchr(optarg,OP_CONTAINS)) != NULL)
     {
         op = OP_CONTAINS;
+    } else if((op_pos = strchr(optarg,OP_NOT_CONTAINS)) != NULL)
+    {
+	op = OP_NOT_CONTAINS;
     } else if((op_pos = strchr(optarg,OP_NOT_EQUAL)) != NULL)
     {
         op = OP_NOT_EQUAL;
     } else
     {
-        panic("Expression must contain an operator: =,^,~,? or !",optarg,NULL);
+        panic("Expression must contain an operator: =,^,~,?,# or !",optarg,NULL);
     }
 
     *op_pos = 0;

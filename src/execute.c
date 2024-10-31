@@ -2449,6 +2449,15 @@ scan_expression_list(struct expr_list *l,char *value,char op,int casecmp)
                     if(strstr(value,l->value) != NULL) return 1;
                 }
                 break;
+	    case OP_NOT_CONTAINS:
+                if(casecmp)
+                {
+                    if(strcasestr(value,l->value) == NULL) return 1;
+                } else
+                {
+                    if(strstr(value,l->value) == NULL) return 1;
+                }
+                break;
 #ifdef HAVE_REGEX
             case OP_REQEXP:
                 if(regexec(&l->reg,value,(size_t) 0, NULL, 0) == 0) return 1;
@@ -2546,6 +2555,7 @@ eval_expression(struct structure *s,struct record *r, int and,int invert, int ca
                     }
                     break;
                 case OP_CONTAINS:
+		case OP_NOT_CONTAINS:
                 case OP_REQEXP:
                     retval += full_scan_expression(e,write_buffer,casecmp);
                     break;

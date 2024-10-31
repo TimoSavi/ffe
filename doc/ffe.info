@@ -1,6 +1,6 @@
-This is ffe.info, produced by makeinfo version 6.3 from ffe.texi.
+This is ffe.info, produced by makeinfo version 6.5 from ffe.texi.
 
-This file documents version 0.3.9 of 'ffe', a flat file extractor.
+This file documents version 0.4.0 of 'ffe', a flat file extractor.
 
    Copyright (C) 2014 Timo Savinen
 
@@ -27,7 +27,7 @@ File: ffe.info,  Node: Top,  Next: Overview,  Prev: (dir),  Up: (dir)
 ffe
 ***
 
-This file documents version 0.3.9 of 'ffe', a flat file extractor.
+This file documents version 0.4.0 of 'ffe', a flat file extractor.
 
    Copyright (C) 2014 Timo Savinen
 
@@ -280,6 +280,9 @@ FIELD*^*VALUE
 
 FIELD*~*VALUE
      Field FIELD contains VALUE.
+
+FIELD*#*VALUE
+     Field FIELD does not contain VALUE.
 
 FIELD*!*VALUE
      Field FIELD is not equal to VALUE.
@@ -1915,10 +1918,10 @@ Node: Overview1956
 Node: Samples2612
 Node: Invoking ffe4101
 Node: Invocation4688
-Node: Configuration8853
-Node: Guessing34308
-Node: Limits35908
-Node: ffe configuration36316
-Node: Problems58076
+Node: Configuration8909
+Node: Guessing34364
+Node: Limits35964
+Node: ffe configuration36372
+Node: Problems58132
 
 End Tag Table
