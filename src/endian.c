@@ -59,7 +59,7 @@ check_system_endianess()
    returns pointer to aligned and converted number
 */
 
-inline uint8_t *
+static inline uint8_t *
 betole_16(uint8_t *s)
 {
     target[0] = s[1];
@@ -67,13 +67,13 @@ betole_16(uint8_t *s)
     return target;
 }
 
-inline uint8_t *
+static inline uint8_t *
 letobe_16(uint8_t *s)
 {
     return betole_16(s);
 }
 
-inline uint8_t *
+static inline uint8_t *
 betole_32(uint8_t *s)
 {
     target[0] = s[3];
@@ -83,13 +83,13 @@ betole_32(uint8_t *s)
     return target;
 }
 
-inline uint8_t *
+static inline uint8_t *
 letobe_32(uint8_t *s)
 {
     return betole_32(s);
 }
 
-inline uint8_t *
+static inline uint8_t *
 betole_64(uint8_t *s)
 {
     target[0] = s[7];
@@ -103,13 +103,13 @@ betole_64(uint8_t *s)
     return target;
 }
 
-inline uint8_t *
+static inline uint8_t *
 letobe_64(uint8_t *s)
 {
     return betole_64(s);
 }
 
-inline uint8_t *
+static inline uint8_t *
 betole_128(uint8_t *s)
 {
     target[0] = s[15];
@@ -132,7 +132,7 @@ betole_128(uint8_t *s)
 }
 
 
-inline uint8_t *
+static inline uint8_t *
 letobe_128(uint8_t *s)
 {
     return betole_128(s);

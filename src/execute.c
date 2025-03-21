@@ -123,25 +123,25 @@ uint8_t *hex_to_ascii;
 static void print_binary_field(uint8_t,struct field *,uint8_t *);
 static void print_fixed_field(uint8_t,struct field *,uint8_t *);
 
-inline uint8_t
+static inline uint8_t
 htocl(uint8_t hex)
 {
         return hex_to_ascii[hex & 0x0f];
 }
 
-inline uint8_t
+static inline uint8_t
 htocb(uint8_t hex)
 {
         return hex_to_ascii[(hex >> 4) & 0x0f];
 }
 
-inline uint8_t
+static inline uint8_t
 bcdtocl(uint8_t bcd)
 {
         return bcd_to_ascii[bcd & 0x0f];
 }
 
-inline uint8_t
+static inline uint8_t
 bcdtocb(uint8_t bcd)
 {
         return bcd_to_ascii[(bcd >> 4) & 0x0f];

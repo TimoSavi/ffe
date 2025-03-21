@@ -1,3 +1,7 @@
+2025-03-21 Timo Savinen <tjsa@iki.fi>
+    * version 0.4.0a
+    * changed inline semantics to follow c99 inline semantics
+
 2024-10-31 Timo Savinen <tjsa@iki.fi>
 
     * version 0.4.0
